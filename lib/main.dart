@@ -16,33 +16,38 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text('Hello'),
-              Text('World'),
-            ]
-          ),
 
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.red[600],
-            child: Text('one')
+      body: Row(
+        children: <Widget>[
+          Expanded(
+              child: Image.asset('assets/jungle_v002.jpg'),
+            flex: 3
           ),
-          Container(
+          Expanded(
+            flex: 3,
+            child: Container(
               padding: EdgeInsets.all(30.0),
-              color: Colors.amber,
-              child: Text('two')
+              color: Colors.cyan,
+              child: Text('1')
+            ),
           ),
-          Container(
-              padding: EdgeInsets.all(40.0),
-              color: Colors.blue[600],
-              child: Text('three')
+          Expanded(
+            flex: 4,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.pinkAccent,
+                child: Text('2')
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.amber,
+                child: Text('3')
+            ),
           )
-        ],
+        ]
       ),
         
 
